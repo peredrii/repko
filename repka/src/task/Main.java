@@ -1,6 +1,7 @@
 package task;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -12,6 +13,7 @@ public class Main {
 	static List<String> list = new ArrayList<>();
 	static String arr[] = { "static", "mama", "papa", "cosmos", "space", "shuttle",
 			"cream", "clavicle" };
+	private static String poidem, domoy;
 
 	static void removeDup() {
 		for (int i = 0; i < list.size() - 1; i++) {
@@ -60,11 +62,16 @@ public class Main {
 		long timeout = System.currentTimeMillis();
 		Set<String> set = new TreeSet<>(list);
 		System.out.println(System.currentTimeMillis() - timeout);
+
+		timeout = System.currentTimeMillis();
+		Set<String> sett = new HashSet<>(list);
+		System.out.println(System.currentTimeMillis() - timeout);
 		
+		
+//		Trie t = new Trie<String>();
+//		t.put(poidem, domoy);
 		List<String> l;
 		
-//		removeDup();
-//		System.out.println(System.currentTimeMillis() - timeout);
 		
 		timeout = System.currentTimeMillis();
 		l = removeDup2(list);
